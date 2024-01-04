@@ -1,0 +1,74 @@
+.hero {
+    height: 600px;
+    width: auto;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(https://images.unsplash.com/photo-1600447881904-4909a61bc9a0?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+}
+.hero__title {
+    font-size: 50px;
+    color: wheat;
+    padding-left: 200px;
+}
+.shop__nav {
+    justify-self: flex-end;
+    position: absolute;
+
+    width: 100%;
+    bottom: 0;
+}
+.shop__nav ul {
+    display: flex;
+
+    justify-content: space-evenly;
+}
+.nav__item {
+    background-color: rgba(245, 245, 220, 0.651);
+    border: none;
+    border-left: 1px solid black;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(245, 245, 220, 0.897);
+    }
+}
+
+
+.shop__grid {
+    padding: 40px;
+    display: grid;
+    justify-items: center;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid__item {
+width: 300px;
+overflow: hidden;
+height: 600px;
+background-color: white;
+
+}
+
+.grid__image {
+    width: 100%;
+}
+
+.pricebox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
