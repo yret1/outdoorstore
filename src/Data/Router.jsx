@@ -6,8 +6,6 @@ import HomePage from '../Components/Pages/HomePage.jsx'
 
 const Router = () => {
     const [products, setProducts] = useState([])
-    const [women, setWomen] = useState([])
-    const [men, setMen] = useState([])
 
 
   useEffect(() => {

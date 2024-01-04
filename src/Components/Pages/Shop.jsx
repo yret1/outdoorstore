@@ -11,14 +11,14 @@ const Shop = (props) => {
 
     const addToCart = (product) => {
 
-        setCurrentInCart([...currentInCart, product])
+        console.log("add to cart")
 
-        console.log(currentInCart)
+        setCurrentInCart((prev) => [...prev, product])
     }
 
     return (
         <section>
-            <Header currentCart={currentInCart} />
+            <Header current={currentInCart} setCurrent={setCurrentInCart} />
             <section className="hero">
                 <h1 className="hero__title">Shop</h1>
 
