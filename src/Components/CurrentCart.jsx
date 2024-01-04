@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-
+import Close from "/src/assets/Close.svg";
 import CartImg from "../assets/Cart.svg"
+import Trash from "/src/assets/Trash.svg"
 
 import "../Styles/Cart.css"
 
@@ -16,10 +17,12 @@ const CartItem = (props) => {
         <li id={id} className="cart__item">
             <article className="product">
                 <img className="cart__image" src={props.image} alt="Product image" />
-                <button onClick={() => deleteItem(id)}>Remove</button>
                 <div className="details">
                 <p className="cart__name">{props.name}</p>
-                <p className="cart__price">${props.price}</p>
+                <div className="details__low">
+                    <img src={Trash} onClick={() => deleteItem(id)}></img>
+                    <p className="cart__price">${props.price}</p>
+                </div>
                 </div>
             </article>
         </li>
@@ -37,7 +40,26 @@ const CurrentCart = (props) => {
 
     const [total, setTotal] = useState(0);
 
+    useEffect(() => {
+        try {
+          localStorage.setItem('cart', JSON.stringify(current));
+        } catch (error) {
+          // Handle error saving to localStorage
+          console.error('Error saving cart data to localStorage:', error);
+        }
+      }, [current]);
 
+      useEffect(() => {
+        try {
+          const savedCart = localStorage.getItem('cart');
+          if (savedCart) {
+            setCurrent(JSON.parse(savedCart));
+          }
+        } catch (error) {
+          // Handle error loading from localStorage
+          console.error('Error loading cart data from localStorage:', error);
+        }
+      }, []);
     useEffect(() => {
 
         let handler = (e) => {
@@ -55,7 +77,10 @@ const CurrentCart = (props) => {
 
          if(current) {
             const totalValue = current.reduce((accumulator, item) => accumulator + item.price, 0);
-            setTotal(totalValue)
+
+            let roundend = Math.round(totalValue * 100) / 100;
+
+            setTotal(roundend)
          }
 
          console.log(current)
@@ -78,10 +103,11 @@ const CurrentCart = (props) => {
             </div>
 
             <div className={`show__cart ${open ? "open" : "closed"}`} ref={cartRef}>
-                <section>
-                    <button onClick={()=> setOpen(!open)}>Close</button>
+                <section className="cart__header">
+                    <h3>Your Cart</h3>
+                    <img className="cart__close" src={Close} alt="Close Button" onClick={() => setOpen(!open)} />
                 </section>
-                <h3>Your Cart</h3>
+                
                 {current ? (
                     current.map((item) => (
                     <CartItem key={item.id} name={item.title} price={item.price} image={item.image} id={item.id} deleteItem={removeItem} />

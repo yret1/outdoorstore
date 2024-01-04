@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header";
+
 import "/src/Styles/Shop.css";
 const Shop = (props) => {
 
@@ -7,6 +8,7 @@ const Shop = (props) => {
     const [currentInCart, setCurrentInCart] = useState([]);
 
     console.log(products)
+
 
 
     const addToCart = (product) => {

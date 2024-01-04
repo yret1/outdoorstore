@@ -7,6 +7,8 @@ import HomePage from '../Components/Pages/HomePage.jsx'
 const Router = () => {
     const [products, setProducts] = useState([])
 
+    
+
 
   useEffect(() => {
       fetch("https://fakestoreapi.com/products")
