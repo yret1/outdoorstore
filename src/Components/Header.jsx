@@ -1,10 +1,16 @@
 import "../Styles/Header.css"
+import { Link } from "react-router-dom"
+import Cart from "../assets/Cart.svg"
+import CurrentCart from "./CurrentCart"
+import Menu from "./Menu"
+
 const Header = () => {
 
     return (
         <header className="header">
-            <button>Menu</button>
-            <button>Cart</button>
+            <Menu />
+            <Link to="/">Clothville</Link>
+            <CurrentCart />
         </header>
     )
 }
