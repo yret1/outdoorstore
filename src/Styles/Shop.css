@@ -53,6 +53,18 @@
     justify-items: center;
     grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+
+    background-color: white;
+}
+
+.filters {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.button {
+    transition: 1s;
 }
 
 .grid__item {
@@ -96,6 +108,18 @@ figcaption {
     &:hover {
         cursor: pointer;
         background-color: rgb(10, 187, 10);
+    }
+}
+
+.inCart {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(226, 90, 72);
     }
 }
 

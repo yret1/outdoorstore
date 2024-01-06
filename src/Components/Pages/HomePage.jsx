@@ -1,11 +1,12 @@
 import Header from "../Header"
 import { Link } from "react-router-dom"
 import "/src/Styles/MainPage.css"
-const HomePage = () => {
+const HomePage = (props) => {
+    const { currentInCart, setCurrentInCart } = props
 
     return (
         <section className="mainpage">
-            <Header />
+            <Header current={currentInCart} setCurrent={setCurrentInCart} />
             <figure className="mainpage__image">
                 <p className="image__top">Take YOUR Step Into The Wilderness</p>
                 <h1 className="image__head">Clothville</h1>

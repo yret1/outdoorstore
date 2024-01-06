@@ -10,7 +10,6 @@ const Header = (props) => {
     return (
         <header className="header">
             <Menu />
-            <Link to="/">Clothville</Link>
             <CurrentCart current={current} setCurrent={setCurrent}  />
         </header>
     )

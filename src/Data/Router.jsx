@@ -6,6 +6,7 @@ import HomePage from '../Components/Pages/HomePage.jsx'
 
 const Router = () => {
     const [products, setProducts] = useState([])
+    const [currentInCart, setCurrentInCart] = useState([]);
 
     
 
@@ -15,6 +16,7 @@ const Router = () => {
       .then(res => res.json())
       .then(data => {
           setProducts(data)
+          
       })
 
       console.log(products)
@@ -25,11 +27,11 @@ const Router = () => {
     const router = createBrowserRouter([
         {
           path: '/',
-          element: <HomePage />,
+          element: <HomePage currentInCart={currentInCart} setCurrentInCart={setCurrentInCart} />,
         },
         {
           path: '/shop',
-          element: <Shop products={products} />
+          element: <Shop currentInCart={currentInCart} setCurrentInCart={setCurrentInCart} products={products} />
         }
       ])
 

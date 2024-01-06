@@ -8,7 +8,7 @@ import "../Styles/Cart.css"
 
 const CartItem = (props) => {
 
-    const {deleteItem, id} = props
+    const {deleteItem, id, removeItem} = props
 
 
 
@@ -40,26 +40,20 @@ const CurrentCart = (props) => {
 
     const [total, setTotal] = useState(0);
 
-    useEffect(() => {
-        try {
-          localStorage.setItem('cart', JSON.stringify(current));
-        } catch (error) {
-          // Handle error saving to localStorage
-          console.error('Error saving cart data to localStorage:', error);
-        }
-      }, [current]);
-
       useEffect(() => {
+        console.log(localStorage.getItem('inCart'));
         try {
-          const savedCart = localStorage.getItem('cart');
-          if (savedCart) {
-            setCurrent(JSON.parse(savedCart));
+          const savedCart = localStorage.getItem('inCart');
+          if (savedCart !== undefined && savedCart !== null) {
+            let inCart = JSON.parse(savedCart);
+            setCurrent(inCart);
           }
         } catch (error) {
           // Handle error loading from localStorage
           console.error('Error loading cart data from localStorage:', error);
         }
       }, []);
+
     useEffect(() => {
 
         let handler = (e) => {
@@ -82,8 +76,6 @@ const CurrentCart = (props) => {
 
             setTotal(roundend)
          }
-
-         console.log(current)
     },[current])
 
     const removeItem = (itemId) => {
@@ -94,12 +86,21 @@ const CurrentCart = (props) => {
       };
 
 
+      const clickHandler = () => {
+        setOpen(!open)
+      }
+
 
     return (
         <section className="cart">
 
-            <div className="cart__trigger" onClick={()=> setOpen(!open)}>
+            <div className="cart__trigger" onClick={clickHandler}>
                 <img src={CartImg} alt="Cart Button" />
+                {current.length > 0 && (
+                    <div className="cart__count">
+                        <p className="count">{current.length}</p>
+                        </div>
+                )}
             </div>
 
             <div className={`show__cart ${open ? "open" : "closed"}`} ref={cartRef}>
