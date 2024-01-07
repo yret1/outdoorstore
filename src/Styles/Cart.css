@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 :root {
     --speed: 500ms;
+    --normtext: 'Roboto', sans-serif;
 }
 
 .cart__trigger {
-    background-color: aqua;
+    background-color: green;
     width: 200px;
     height: 200px;
 
@@ -152,9 +155,37 @@
     color: white;
     font-size: 12px;
 
+    font-family: ;
+
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.count {
+    font-family: var(--normtext);
+}
 
+
+@media screen and (max-width: 768px) {
+    .cart__trigger {
+        width: 100px;
+        height: 100px;
+
+        right: -30px;
+        top: -30px;
+    }
+
+    .cart__trigger img {
+        width: 30px;
+        height: 30px;
+
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cart__count {
+        margin-bottom: 40px;
+    }
+    
+}

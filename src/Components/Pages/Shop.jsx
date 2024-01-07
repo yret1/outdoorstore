@@ -78,13 +78,23 @@ const Shop = (props) => {
                 <h1 className="hero__title">Shop</h1>
 
                 <nav className="shop__nav">
-                    <ul>
+                    <ul className="nav__screen">
                         <button onClick={filter} value={""} className="nav__item">All Items</button>
                         <button onClick={filter} value={"men"} className="nav__item">Men</button>
                         <button onClick={filter} value={"women"} className="nav__item">Women</button>
                         <button onClick={filter} value={"electronics"} className="nav__item">Electronics</button>
                         <button onClick={filter} value={"jewellry"} className="nav__item">Jewellry</button>
                     </ul>
+                    <div className="nav__small">
+                      <span>Categorys <i className="arrow down"></i></span>
+                      <div className="dropdowns">
+                      <button onClick={filter} value={""} className="nav__item">All Items</button>
+                        <button onClick={filter} value={"men"} className="nav__item">Men</button>
+                        <button onClick={filter} value={"women"} className="nav__item">Women</button>
+                        <button onClick={filter} value={"electronics"} className="nav__item">Electronics</button>
+                        <button onClick={filter} value={"jewellry"} className="nav__item">Jewellry</button>
+                      </div>
+                    </div>
                 </nav>
             </section>
             <section className="filters">
