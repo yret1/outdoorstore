@@ -11,5 +11,11 @@
   font-family: 'Inknut Antiqua', serif;
 }
 body {
-  background-color: #65A582;
+  background-color: #2a292b;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0px;
 }

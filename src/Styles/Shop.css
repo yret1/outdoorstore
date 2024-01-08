@@ -11,12 +11,15 @@
     background-position: center;
     background-size: cover;
 
+    filter: sepia(0.2);
+
     position: relative;
 }
 .hero__title {
     font-size: 50px;
-    color: wheat;
-    padding-left: 200px;
+    padding-bottom: 80px;
+    padding-right: 600px;
+    color: #ddcbc2;
 }
 .shop__nav {
     justify-self: flex-end;
@@ -54,18 +57,37 @@
     grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
 
-    background-color: white;
+    background-color: #2a292b;
 }
 
 .filters {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #ddcbc2;
+    background-color: #2a292b;
 }
 
-.button {
-    transition: width 0.3s ease;
-}
+@keyframes expandAnimation {
+    0% {
+      min-width: 100px;
+    }
+    100% {
+      min-width: 200px;
+    }
+  }
+
+@keyframes collapseAnimation {
+    0% {
+      min-width: 200px;
+    }
+    100% {
+      min-width: 100px;
+    }
+  }
+  
+  .button {
+
+  }
 
 .grid__item {
     padding: 10px;
@@ -81,7 +103,7 @@
     background-color: white;
 
     text-align: center;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 20px rgb(160, 163, 0);
 
 }
 .img__wrapper {
@@ -103,7 +125,13 @@ figcaption {
     border-radius: 15px;
     padding: 5px;
     background-color: green;
+    min-width:80px ;
     color: white;
+
+    animation-name: collapseAnimation;
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
     &:hover {
         cursor: pointer;
@@ -116,6 +144,12 @@ figcaption {
     padding: 5px;
     background-color: red;
     color: white;
+    min-width: 140px;
+
+    animation-name: expandAnimation;
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
     &:hover {
         cursor: pointer;
@@ -186,3 +220,4 @@ figcaption {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+

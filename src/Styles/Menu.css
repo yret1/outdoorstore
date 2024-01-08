@@ -8,24 +8,19 @@
 }
 
 .menu__trigger {
-    position: absolute;
-    left: -70px;
-    top: -70px;
+  
     border-radius: 50%;
 
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    background-color: green;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 
     &:hover {
         cursor: pointer;
-        background-color: rgba(37, 194, 71, 0.5);
-        scale: 1.1;
         transition: var(--speed) ease-in-out;
     }
 }
@@ -35,8 +30,6 @@
     height: 50px;
     overflow: hidden;
 
-    margin-right: 50px;
-    margin-bottom: 50px;
 }
 
 .menu__dropdown {

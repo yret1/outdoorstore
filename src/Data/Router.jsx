@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 import Shop from '../Components/Pages/Shop.jsx'
 import HomePage from '../Components/Pages/HomePage.jsx'
-
+import About from '../Components/Pages/About.jsx'
 const Router = () => {
     const [products, setProducts] = useState([])
     const [currentInCart, setCurrentInCart] = useState([]);
@@ -32,6 +32,10 @@ const Router = () => {
         {
           path: '/shop',
           element: <Shop currentInCart={currentInCart} setCurrentInCart={setCurrentInCart} products={products} />
+        },
+        {
+          path: '/about',
+          element: <About currentInCart={currentInCart} setCurrentInCart={setCurrentInCart} />
         }
       ])
 
