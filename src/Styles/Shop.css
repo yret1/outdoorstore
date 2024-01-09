@@ -15,6 +15,9 @@
 
     position: relative;
 }
+.shop__wrapp {
+    width: 100%;
+}
 .hero__title {
     font-size: 50px;
     padding-bottom: 80px;
@@ -170,7 +173,25 @@ figcaption {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+    @keyframes expandAnimation {
+        0% {
+          min-width: 60px;
+        }
+        100% {
+          min-width: 100px;
+        }
+      }
+    
+    @keyframes collapseAnimation {
+        0% {
+          min-width: 100px;
+        }
+        100% {
+          min-width: 60px;
+        }
+      }
     .shop__grid {
         grid-template-columns: repeat(2, 1fr);
     }

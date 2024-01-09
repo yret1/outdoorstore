@@ -90,11 +90,15 @@
     display: flex;
     justify-content: flex-end;
 
-    position: absolute;
-    bottom: 50px;
-    right: 20px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px;
     color: white;
     font-size: 30px;
+
+    background-color:rgb(68, 65, 61) ;
+    
 }
 
 

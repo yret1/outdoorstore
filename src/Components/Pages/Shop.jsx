@@ -73,7 +73,7 @@ const Shop = (props) => {
     }
 
     return (
-        <section>
+        <section className="shop__wrapp">
             <Header current={currentInCart} setCurrent={setCurrentInCart} />
             <section className="hero">
                 <h1 className="hero__title">Shop</h1>

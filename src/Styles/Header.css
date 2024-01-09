@@ -8,7 +8,7 @@
 
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100dvw;
     z-index: 5;
 }
 
@@ -19,3 +19,13 @@
     border: none;
 }
 
+.Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100%
+}
