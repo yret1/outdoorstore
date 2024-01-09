@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../Header";
+import Transition from "../../Styles/transition";
 
 import "/src/Styles/Shop.css";
 const Shop = (props) => {

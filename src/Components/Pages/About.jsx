@@ -1,5 +1,6 @@
 import "/src/Styles/About.css"
 import Header from "../Header"
+import Transition from "../../Styles/transition"
 const About = (props) => {
     const { currentInCart, setCurrentInCart } = props
     
@@ -50,7 +51,7 @@ const About = (props) => {
                         <h2>We dont exist</h2>
                         <p>Our company actually doesnt exist. But we could.
                             This page was made by some guy named Simon.
-                            During a cold night in Sweden during the first week of 2024. It was made with ReactJS.
+                            Made on a cold night in Sweden during the first week of 2024. It was made with ReactJS.
                             You should head over to the contact page and send him a message.
                         </p>
                     </div>

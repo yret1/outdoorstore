@@ -129,7 +129,7 @@ figcaption {
     color: white;
 
     animation-name: collapseAnimation;
-    animation-duration: 250ms;
+    animation-duration: 100ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 
@@ -147,7 +147,7 @@ figcaption {
     min-width: 140px;
 
     animation-name: expandAnimation;
-    animation-duration: 250ms;
+    animation-duration: 100ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 

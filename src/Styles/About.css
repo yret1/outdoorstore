@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
 
+    text-shadow: 0 0 5px black;
+
 
     background-image: url(https://images.unsplash.com/photo-1516655855035-d5215bcb5604?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
@@ -54,6 +56,20 @@
     align-items: center;
     overflow: hidden;
 }
+
+
+.about__card figure img {
+    border:1px solid wheat;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+}
+
+.about__card--reverse figure img {
+    border:1px solid wheat;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+}
+
 
 .card__text {
 

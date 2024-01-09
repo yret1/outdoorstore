@@ -76,6 +76,8 @@ const CurrentCart = (props) => {
 
             setTotal(roundend)
          }
+
+         localStorage.setItem("inCart", JSON.stringify(current));
     },[current])
 
     const removeItem = (itemId) => {

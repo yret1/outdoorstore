@@ -1,0 +1,67 @@
+.hero__contact {
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(https://images.unsplash.com/photo-1568864453925-206c927dab0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    color: #ddcbc2;
+
+    filter: sepia(0.7);
+    filter: brightness(0.8);
+}
+
+.contact__title {
+    font-size: 50px;
+    text-shadow: 0 0 10px black;
+}
+.contact__text {
+    font-size: 25px;
+    font-weight: 900;
+    text-shadow: 0 0 5px black;
+}
+
+
+
+.socials {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clickable {
+    cursor: pointer;
+    color: #ddcbc2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.socials a{
+    text-decoration: none;
+    list-style: none;
+    color: #ddcbc2;
+}
+.clickable img {
+    width: 100px;
+    color: #ddcbc2;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__text--head {
+    font-size: 30px;
+    font-weight: 900;
+    color: #ddcbc2;
+}
