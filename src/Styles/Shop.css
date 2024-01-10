@@ -17,6 +17,7 @@
 }
 .shop__wrapp {
     width: 100%;
+    overflow-x: hidden;
 }
 .hero__title {
     font-size: 50px;
