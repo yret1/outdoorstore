@@ -76,6 +76,11 @@
     width: 700px;
   }
 
+  .left__footer--mob{
+    display: none;
+  }
+
+
 
   
   .shop {
@@ -147,6 +152,12 @@
     }
 
     .mainpage__left {
+      padding-top: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      align-items: center;
       background-image: url(https://images.unsplash.com/photo-1507429362187-5c9d78b05310?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
       background-size: cover;
       background-position: center;
@@ -164,6 +175,61 @@
     .text {
       font-size: 60px;
       line-height: 90px;
+      padding-top: 0;
+    }
+
+    .left__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     
+  }
+
+  @media (max-width: 500px) {
+    .text {
+      font-size: 40px;
+      line-height: 70px;
+    }
+
+    .left__footer--mob{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 10px;
+      z-index: 4;
+
+      border-radius: 5px;
+      color: white;
+      background-color: #2a292b;
+      border: 1px solid white;
+
+      width: 100%;
+    }
+
+    .left__footer {
+
+      display: none;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 10px;
+      z-index: 2;
+
+      width: 100%;
+    }
+
+    .theButton {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      border-radius: 10px;
+      color: white;
+      background-color: #2a292b;
+      border: 1px solid white;
+    }
   }
