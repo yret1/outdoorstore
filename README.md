@@ -1,5 +1,7 @@
 Clothville
 
+![Alt text](image.png)
+
 A Company that focuses on green products. The only problem, it isn't real!
 
 This is my first larger react-project, Made using FAKESTORE-API, React, css and unsplash.
