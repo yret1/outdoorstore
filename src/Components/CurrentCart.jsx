@@ -81,9 +81,6 @@ const CurrentCart = (props) => {
     },[current])
 
     const removeItem = (itemId) => {
-        console.log(itemId)
-        console.log("deleted")
-
         setCurrent((prevCart) => prevCart.filter((item) => item.id !== itemId));
       };
 

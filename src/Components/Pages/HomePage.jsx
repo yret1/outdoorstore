@@ -6,8 +6,10 @@ const HomePage = (props) => {
 
     // <Header current={currentInCart} setCurrent={setCurrentInCart} />
     return (
+        <>
+        <Header current={currentInCart} setCurrent={setCurrentInCart} />
         <section className="mainpage">
-            <Header current={currentInCart} setCurrent={setCurrentInCart} />
+            
             <section className="mainpage__left">
                 <div className="left__header">
                     <h2>Clothville</h2>
@@ -28,6 +30,7 @@ const HomePage = (props) => {
             </section>
             <section className="mainpage__right"></section>
         </section>
+        </>
     )
 }
 

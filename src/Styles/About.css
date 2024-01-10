@@ -24,7 +24,7 @@
 
 .about__story {
     color: #ddcbc2;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 
     display: flex;
@@ -96,4 +96,59 @@
     object-fit: cover;
     width: 100%;
     height: inherit;
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+
+    .about__story {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 725px) {
+
+    .card__image img {
+        max-height: 300px;
+    }
+    
+
+    .about__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .about__card--reverse {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .about__story {
+        gap: 60px
+    }
+}
+
+@media (max-width: 500px) {
+    .about__story {
+        font-size: 10px;
+    }
+
+    .card__image {
+        max-width: 400px;
+        min-width: 200px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .card__image {
+        max-width: 300px;
+        min-width: 200px;
+    }
+
 }

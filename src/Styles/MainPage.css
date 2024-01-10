@@ -132,3 +132,38 @@
       border: 1px solid white;
     }
   }
+
+
+  @media screen and (max-width: 1100px) {
+
+    
+    .mainpage {
+      display: flex;
+      justify-content: center;
+    }
+    .mainpage__right {
+      grid-area: right;
+      display: none;
+    }
+
+    .mainpage__left {
+      background-image: url(https://images.unsplash.com/photo-1507429362187-5c9d78b05310?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-size: cover;
+      background-position: center;
+      filter: sepia(0.5);
+      text-shadow: 0 0 10px black;  
+      width: 100%   ;
+    }
+
+    
+  }
+
+
+  @media screen and (max-width: 800px) {
+
+    .text {
+      font-size: 60px;
+      line-height: 90px;
+    }
+    
+  }

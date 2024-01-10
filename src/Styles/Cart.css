@@ -181,4 +181,8 @@
         width: 90%;
         height: 100dvh;
     }
+
+    .total {
+        position: absolute;
+    }
 }
