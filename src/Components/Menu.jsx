@@ -29,25 +29,34 @@ const DropDownItem = (props) => {
 const Menu = () => {
 
     const menuRef = useRef()
+    const menuTriggerRef = useRef();
 
     const [open,setOpen] = useState(false)
 
-
     useEffect(() => {
-        let handler = (e) => {
-           if(!menuRef.current.contains(e.target)){
-            setOpen(false)
-           }
-        }
-        
-        document.addEventListener("mousedown", handler )
-    })
+        const handleClick = (e) => {
+          if (!menuRef.current.contains(e.target) && !menuTriggerRef.current.contains(e.target)) {
+            setOpen(false);
+          }
+        };
+    
+        document.addEventListener("mousedown", handleClick);
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClick);
+        };
+      }, []);
+
+    const handleClick = () => {
+        setOpen(prevOpen => !prevOpen);
+      };
+
 
 
     return (
         <section className="menu">
             
-            <div className="menu__trigger" onClick={() => setOpen(!open)}>
+            <div className="menu__trigger" ref={menuTriggerRef} onClick={handleClick}>
                 <img src={MenuImg} alt="Menu" />
             </div>
 
@@ -58,6 +67,7 @@ const Menu = () => {
                 <DropDownItem path={"/about"} text={"About"} img={About} />
                 <DropDownItem path={"/contact"} text={"Contact"} img={Contact} />
             </div>
+
         </section>
     )
 }
