@@ -1,4 +1,7 @@
 import "../Styles/Form.css";
+
+import Github from "../assets/Github.svg";
+import Linked from "../assets/Linkedin.svg";
 const Form = () => {
     return (
         <section className="contactme">
@@ -7,9 +10,10 @@ const Form = () => {
                     <div className="socials">
                         <h3>My Platforms</h3>
                         <div className="social__platforms">
-                            <a href="www.github.com/yret1"><i className="fab fa-github">SOCIAL  </i></a>
-                            <a href="www.linkedin.com/simon"><i className="fab fa-linkedin">SOCIAL  </i></a>
+                            <a href="www.github.com/yret1"><img src={Github} alt="" /></a>
+                            <a href="www.linkedin.com/simon"><img src={Linked} alt="" /></a>
                         </div>
+                        <h3>Contact Me</h3>
                     </div>
                 </div>
 
