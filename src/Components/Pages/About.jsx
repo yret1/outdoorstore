@@ -1,6 +1,5 @@
 import "/src/Styles/About.css"
 import Header from "../Header"
-import Transition from "../../Styles/transition"
 const About = (props) => {
     const { currentInCart, setCurrentInCart } = props
     

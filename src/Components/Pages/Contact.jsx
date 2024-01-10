@@ -1,5 +1,5 @@
 import Header from "../Header"
-
+import Form from "../Form"
 import "/src/Styles/Contact.css"
 const Contact = (props) => {
 
@@ -16,48 +16,11 @@ const Contact = (props) => {
             </div>
 
             <section className="contact__form">
-                <div className="contact__head">
-                <p className="contact__text--head">My socials</p>
-                </div>
 
-                <div className="socials">
-                <a href="https://github.com/yret1" target="_blank" rel="noreferrer">
-                    <div className="github clickable">
-                        <h2>Github</h2>
-                        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="Github" />
-                      
-                        <p>Go there!</p>
-                    </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/simon-guillot/" target="_blank" rel="noreferrer">
-                    <div className="linked clickable">
-                        <h2>Linked In</h2>
-                       <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="Linkedin" />
-                        <p>Go there!</p>
-                    </div>
-                    </a>
-                </div>
+            
 
                   <section className="form">
-                    <h2 className="form__title">Send me a message</h2>
-                    <form className="formy" action="https://public.herotofu.com/v1/2f9fb890-ae99-11ee-9dd2-c1caafee32ff" method="post" acceptCharset="UTF-8">
-                    
-                            <label htmlFor="name">
-                                <input name="Name" id="name" type="text" required />
-                            </label>
-                            
-                    
-                            <label htmlFor="email">
-                                <input name="Email" id="email" type="email" required  />
-                            </label>
-                            
-                        <div>
-                            <input type="submit" value="Send Email" />
-                            <div  aria-hidden="true">
-                            <input type="text" name="_gotcha" tabIndex="-1" autoComplete="off" />
-                            </div>
-                        </div>
-                        </form>
+                   <Form />
                   </section>
                 </section>
             </section>

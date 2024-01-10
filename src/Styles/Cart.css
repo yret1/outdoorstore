@@ -177,4 +177,8 @@
         margin-bottom: 40px;
     }
     
+    .show__cart {
+        width: 90%;
+        height: 100dvh;
+    }
 }

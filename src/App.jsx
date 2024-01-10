@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 
 import HomePage from "./Components/Pages/HomePage.jsx"
-import Header from './Components/Header.jsx'
 import Shop from './Components/Pages/Shop.jsx'
 import Contact from './Components/Pages/Contact.jsx'
 import About from './Components/Pages/About.jsx'
@@ -10,7 +9,7 @@ import About from './Components/Pages/About.jsx'
 import './App.css'
 import "./Styles/transitions.css"
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { AnimatePresence,mirrorEasing,motion, progress } from 'framer-motion'
+import { AnimatePresence,motion} from 'framer-motion'
 
 function App() {
 
@@ -18,8 +17,6 @@ function App() {
   const [products, setProducts] = useState([])
   const [currentInCart, setCurrentInCart] = useState([]);
 
-  const easeIn = (progress) =>{progress * progress}
-  const easeInOut = mirrorEasing(easeIn);
 
   
 
@@ -31,8 +28,6 @@ useEffect(() => {
         setProducts(data)
         
     })
-
-    console.log(products)
 
 
 },[])
@@ -52,7 +47,7 @@ useEffect(() => {
             initial={{scaleY: 0}} 
             animate={{scaleY: 0}}
             exit={{scaleY: 1}}
-            transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+            transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
             />
 
             <motion.div 
@@ -60,7 +55,7 @@ useEffect(() => {
             initial={{scaleY: 1}} 
             animate={{scaleY: 0}}
             exit={{scaleY: 0}}
-            transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+            transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
             />
                 </>
             }
@@ -76,7 +71,7 @@ useEffect(() => {
               initial={{scaleY: 0}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 1}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
   
               <motion.div 
@@ -84,7 +79,7 @@ useEffect(() => {
               initial={{scaleY: 1}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 0}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
                   </>
             }
@@ -99,7 +94,7 @@ useEffect(() => {
               initial={{scaleY: 0}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 1}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
   
               <motion.div 
@@ -107,7 +102,7 @@ useEffect(() => {
               initial={{scaleY: 1}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 0}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
                   </>
             }
@@ -124,7 +119,7 @@ useEffect(() => {
               initial={{scaleY: 0}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 1}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
   
               <motion.div 
@@ -132,7 +127,7 @@ useEffect(() => {
               initial={{scaleY: 1}} 
               animate={{scaleY: 0}}
               exit={{scaleY: 0}}
-              transition={{duration: 1.3, easeInOut: [0.22, 1, 0.36, 1]}} 
+              transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}} 
               />
                   </>
             }
