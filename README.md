@@ -1,8 +1,15 @@
-# React + Vite
+Clothville
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Company that focuses on green products. The only problem, it isn't real!
 
-Currently, two official plugins are available:
+This is my first larger react-project, Made using FAKESTORE-API, React, css and unsplash.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clothville is now optimized for most screen sizes and even includes a functional contact form that sends the message straight to me!
+
+This project gave me a lot of new skills and made me use my previously obtained knowledge of Javascript in new ways
+
+Huge thanks to The Odinproject and W3Schools!
+
+Check out the project over at -> https://clothville.netlify.app/
+
+Happy 2024!
