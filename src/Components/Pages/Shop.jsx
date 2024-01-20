@@ -87,7 +87,7 @@ const Shop = (props) => {
                         <button onClick={filter} value={"jewellry"} className="nav__item">Jewellry</button>
                     </ul>
                     <div className="nav__small">
-                      <span>Categorys <i className="arrow down"></i></span>
+                      <span>Categories <i className="arrow down"></i></span>
                       <div className="dropdowns">
                       <button onClick={filter} value={""} className="nav__item">All Items</button>
                         <button onClick={filter} value={"men"} className="nav__item">Men</button>
